@@ -92,13 +92,13 @@ export default async function MembershipPage() {
             <h3 className="mt-3 font-serif text-3xl text-ink">会员不是折扣卡，而是家庭食品管家</h3>
             <div className="mt-6 space-y-4">
               <div className="rounded-[22px] bg-mist p-4 text-sm leading-7 text-ink/72">
-                你得到的是每周精选推荐和长期稳定供给关系，而不是每次都从零开始筛选食材。
+                你得到的是每周家庭食材清单，知道本周什么值得买、什么不值得买，而不是每次都从零开始筛选食材。
               </div>
               <div className="rounded-[22px] bg-mist p-4 text-sm leading-7 text-ink/72">
-                你看到的是农场溯源权限和检测报告库，而不是一次性的营销文案。
+                你看到的是农场溯源权限、检测报告库和走进农场的生产现场，而不是一次性的营销文案。
               </div>
               <div className="rounded-[22px] bg-mist p-4 text-sm leading-7 text-ink/72">
-                你享受的是专属配送、家庭定制食材包、补货提醒和农场直播一起组成的服务体验。
+                你享受的是根据家庭结构推荐、专属配送协调和补货提醒一起组成的长期服务体验。
               </div>
             </div>
           </div>
@@ -106,7 +106,7 @@ export default async function MembershipPage() {
         <SectionHeading
           eyebrow="membership system"
           title="年费会员，购买的是长期安心的家庭食材管理能力"
-          description="安心田的会员制设计，不是为了打折，而是为了让精选食材、农场信息、检测报告、定配服务和家庭建议能持续运转。"
+          description="安心田的会员制设计，不是为了打折，而是为了把每周家庭食材清单、农场信息、检测报告、定配服务和家庭建议持续运转起来。"
         />
 
         <div className="grid gap-6 lg:grid-cols-3">
@@ -133,9 +133,9 @@ export default async function MembershipPage() {
           <div className="panel bg-earth-glow p-6 sm:p-8">
             <h2 className="text-2xl font-medium text-ink">为什么适合家庭用户</h2>
             <div className="mt-6 space-y-4 text-sm leading-7 text-ink/72">
-              <p>有孩子的家庭，需要的是长期稳定、可验证的食材来源，而不是每次都重新花时间筛选。</p>
-              <p>有老人或慢病饮食管理需求的家庭，更需要简单、持续、少焦虑的采购方式。</p>
-              <p>会员体系让平台能以较高标准控制农场准入和履约服务，也让用户得到更完整的陪伴感。</p>
+              <p>宝宝辅食家庭，更需要有人告诉你哪些叶菜、主粮和乳品更适合长期放进家里。</p>
+              <p>老人健康家庭，更需要稳定、易理解、少焦虑的采购方式，而不是频繁试错。</p>
+              <p>健身家庭，也需要更清楚的主粮、乳品和高频补货建议，减少日常决策成本。</p>
             </div>
             <Link href="/join" className="cta-primary mt-8">预约加入会员</Link>
           </div>

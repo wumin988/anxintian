@@ -23,6 +23,7 @@ export default async function HomePage() {
   const testimonials = content.testimonials || [];
   const trustHighlights = content.trustHighlights || [];
   const trustModules = content.trustModules || [];
+  const latestReport = reports[0];
 
   return (
     <>
@@ -61,6 +62,23 @@ export default async function HomePage() {
                     </div>
                   ))}
                 </div>
+                {latestReport ? (
+                  <Link
+                    href={`/reports/${latestReport.id}`}
+                    className="mt-6 flex flex-col gap-3 rounded-[24px] border border-[#dfe7d4] bg-[#f7fbef] p-5 transition hover:bg-[#f2f8e5] sm:flex-row sm:items-center sm:justify-between"
+                  >
+                    <div className="space-y-2">
+                      <p className="text-xs tracking-[0.18em] text-ink/45 uppercase">latest public report</p>
+                      <p className="text-lg font-medium text-ink">
+                        最近一次公开检测：{latestReport.date} · {latestReport.summary.includes("未检出") ? "农残未检出" : "检测合格"}
+                      </p>
+                      <p className="text-sm leading-6 text-ink/68">{latestReport.title}</p>
+                    </div>
+                    <span className="rounded-full bg-white px-4 py-2 text-sm font-medium text-ink shadow-sm">
+                      查看详情
+                    </span>
+                  </Link>
+                ) : null}
               </div>
             </div>
           </div>
@@ -98,8 +116,6 @@ export default async function HomePage() {
           </div>
           <div className="grid gap-6 lg:grid-cols-3">
             {farms.map((farm) => {
-              const report = getReportById(content, farm.reportId);
-
               return (
                 <div key={farm.id} className="panel overflow-hidden">
                   <div className="h-44 overflow-hidden">
@@ -108,10 +124,27 @@ export default async function HomePage() {
                   <div className="p-6">
                     <p className="text-sm text-ink/50">{farm.location}</p>
                     <h3 className="mt-2 text-xl font-medium text-ink">{farm.name}</h3>
-                    <div className="mt-4 rounded-3xl bg-mist p-4 text-sm text-ink/72">
-                      <p>认证：{farm.certifications?.[0]}</p>
-                      <p className="mt-2">最近检测：{report?.summary?.split("；")[0]}</p>
+                    <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                      <div className="rounded-3xl bg-mist p-4 text-sm text-ink/72">
+                        <p className="text-ink/45">合作时间</p>
+                        <p className="mt-2 text-lg font-medium text-ink">{farm.cooperationYears}</p>
+                      </div>
+                      <div className="rounded-3xl bg-mist p-4 text-sm text-ink/72">
+                        <p className="text-ink/45">累计检测</p>
+                        <p className="mt-2 text-lg font-medium text-ink">{farm.cumulativeTests}</p>
+                      </div>
+                      <div className="rounded-3xl bg-mist p-4 text-sm text-ink/72">
+                        <p className="text-ink/45">最近检测</p>
+                        <p className="mt-2 text-lg font-medium text-ink">{farm.lastTest}</p>
+                      </div>
+                      <div className="rounded-3xl bg-mist p-4 text-sm text-ink/72">
+                        <p className="text-ink/45">平台评级</p>
+                        <p className="mt-2 text-lg font-medium text-ink">{farm.platformRating}</p>
+                      </div>
                     </div>
+                    <Link href={`/traceability/${farm.id}`} className="cta-secondary mt-5">
+                      查看农场详情
+                    </Link>
                   </div>
                 </div>
               );
@@ -125,15 +158,31 @@ export default async function HomePage() {
           <SectionHeading
             eyebrow="weekly reports"
             title="本周检测报告"
-            description="让普通家庭在下单前就能先看最近批次的检测摘要，而不是只看到一句“我们很严格”。"
+            description="让用户直接看到最近一次检测时间、关键结论和可展开的详情，让检测报告本身也成为平台资产。"
           />
           <div className="grid gap-6 lg:grid-cols-3">
             {reports.map((report) => (
               <div key={report.id} className="panel p-6">
-                <p className="text-xs tracking-[0.18em] text-ink/45 uppercase">{report.date}</p>
-                <h3 className="mt-3 text-xl font-medium text-ink">{report.title}</h3>
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-xs tracking-[0.18em] text-ink/45 uppercase">latest check</p>
+                    <p className="mt-2 text-sm text-ink/55">{report.date}</p>
+                  </div>
+                  <span className="rounded-full bg-[#eef7dc] px-3 py-1 text-xs font-medium text-[#5c8a3f]">
+                    {report.summary.includes("未检出") ? "农残未检出" : "检测合格"}
+                  </span>
+                </div>
+                <h3 className="mt-4 text-xl font-medium text-ink">{report.title}</h3>
+                <p className="mt-3 text-sm text-ink/55">批次编号：{report.batchCode}</p>
                 <p className="mt-3 text-sm leading-7 text-ink/72">{report.summary}</p>
-                <Link href="/trust" className="cta-secondary mt-5">进入报告库</Link>
+                <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                  {report.items?.slice(0, 2).map((item) => (
+                    <div key={item} className="rounded-[20px] bg-mist px-4 py-3 text-sm text-ink/72">
+                      {item}
+                    </div>
+                  ))}
+                </div>
+                <Link href={`/reports/${report.id}`} className="cta-secondary mt-5">查看检测详情</Link>
               </div>
             ))}
           </div>
@@ -145,7 +194,7 @@ export default async function HomePage() {
           <SectionHeading
             eyebrow="membership"
             title="会员 = 家庭食品管家"
-            description="会员价值不是折扣，而是每周精选推荐、农场溯源权限、检测报告库、专属配送、家庭定制食材包和农场直播。"
+            description="会员价值不是折扣，而是每周家庭食材清单、值得买 / 不值得买判断、家庭结构推荐和走进农场的长期服务。"
           />
           <div className="grid gap-6 lg:grid-cols-3">
             {membershipPlans.map((plan, index) => (

@@ -1,19 +1,54 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="630" fill="#F8F2E8"/>
-  <rect x="38" y="38" width="1124" height="554" rx="40" fill="url(#bg)"/>
-  <rect x="92" y="92" width="120" height="120" rx="36" fill="#223127"/>
-  <text x="152" y="170" text-anchor="middle" fill="white" font-size="68" font-family="sans-serif" font-weight="700">安</text>
-  <text x="254" y="160" fill="#223127" font-size="62" font-family="sans-serif" font-weight="700">安心田</text>
-  <text x="256" y="220" fill="#6C766B" font-size="28" font-family="sans-serif" letter-spacing="8">ORGANIC TRUST CLUB</text>
-  <text x="92" y="330" fill="#223127" font-size="64" font-family="sans-serif" font-weight="700">可信有机食材会员直供平台</text>
-  <text x="92" y="394" fill="#4E5E53" font-size="28" font-family="sans-serif">精选农场 · 溯源公开 · 检测可见 · 家庭健康食材直供</text>
-  <rect x="92" y="452" width="220" height="56" rx="28" fill="#223127"/>
-  <text x="202" y="489" text-anchor="middle" fill="white" font-size="24" font-family="sans-serif">安心田 MVP 官网</text>
+  <rect width="1200" height="630" fill="#F5EEDD"/>
+  <rect x="30" y="30" width="1140" height="570" rx="42" fill="#FBF7EE"/>
+  <rect x="66" y="66" width="1068" height="498" rx="34" fill="url(#panel)"/>
+
+  <rect x="104" y="108" width="88" height="88" rx="28" fill="#203127"/>
+  <text x="148" y="165" text-anchor="middle" fill="#FFFFFF" font-size="54" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-weight="700">安</text>
+  <text x="220" y="152" fill="#203127" font-size="54" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-weight="700">安心田</text>
+  <text x="222" y="192" fill="#7C877B" font-size="24" letter-spacing="6" font-family="Inter, Arial, sans-serif">ORGANIC TRUST CLUB</text>
+
+  <rect x="104" y="246" width="160" height="42" rx="21" fill="#F3E4D7"/>
+  <text x="184" y="273" text-anchor="middle" fill="#B86C47" font-size="22" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-weight="600">家庭食品信任平台</text>
+
+  <text x="104" y="356" fill="#203127" font-size="68" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-weight="700">让家人吃得更放心</text>
+  <text x="104" y="414" fill="#4E5E53" font-size="27" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">
+    我们筛选农场、审核标准、检测批次，只把值得信任的食材送到家庭餐桌。
+  </text>
+
+  <rect x="104" y="456" width="154" height="46" rx="23" fill="#FFFFFF"/>
+  <rect x="274" y="456" width="154" height="46" rx="23" fill="#FFFFFF"/>
+  <rect x="444" y="456" width="154" height="46" rx="23" fill="#FFFFFF"/>
+  <text x="181" y="485" text-anchor="middle" fill="#203127" font-size="20" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-weight="600">农场实地审核</text>
+  <text x="351" y="485" text-anchor="middle" fill="#203127" font-size="20" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-weight="600">批次检测公开</text>
+  <text x="521" y="485" text-anchor="middle" fill="#203127" font-size="20" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-weight="600">会员直供配送</text>
+
+  <rect x="708" y="122" width="352" height="352" rx="30" fill="#FFFCF6" stroke="#E8E1D2"/>
+  <text x="744" y="175" fill="#9BA392" font-size="20" letter-spacing="4" font-family="Inter, Arial, sans-serif">TRUST DATA</text>
+  <text x="744" y="235" fill="#203127" font-size="42" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-weight="700">先看一组信任数字</text>
+
+  <rect x="744" y="272" width="128" height="112" rx="22" fill="#FFFFFF"/>
+  <rect x="892" y="272" width="128" height="112" rx="22" fill="#FFFFFF"/>
+  <rect x="744" y="400" width="128" height="112" rx="22" fill="#FFFFFF"/>
+  <rect x="892" y="400" width="128" height="112" rx="22" fill="#FFFFFF"/>
+
+  <text x="766" y="310" fill="#9BA392" font-size="18" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">合作农场</text>
+  <text x="766" y="356" fill="#203127" font-size="34" font-family="Inter, Arial, sans-serif" font-weight="700">18 家</text>
+
+  <text x="914" y="310" fill="#9BA392" font-size="18" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">会员家庭</text>
+  <text x="914" y="356" fill="#203127" font-size="34" font-family="Inter, Arial, sans-serif" font-weight="700">1,276 户</text>
+
+  <text x="766" y="438" fill="#9BA392" font-size="18" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">检测批次</text>
+  <text x="766" y="484" fill="#203127" font-size="34" font-family="Inter, Arial, sans-serif" font-weight="700">624 次</text>
+
+  <text x="914" y="438" fill="#9BA392" font-size="18" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">农残未检出率</text>
+  <text x="914" y="484" fill="#203127" font-size="34" font-family="Inter, Arial, sans-serif" font-weight="700">99.8%</text>
+
   <defs>
-    <linearGradient id="bg" x1="38" y1="38" x2="1041.64" y2="742.526" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#E2EBDD"/>
-      <stop offset="0.55" stop-color="#F6E2D2"/>
-      <stop offset="1" stop-color="#F7F4EC"/>
+    <linearGradient id="panel" x1="66" y1="66" x2="1004" y2="684" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F9F5EC"/>
+      <stop offset="0.54" stop-color="#F3E5D7"/>
+      <stop offset="1" stop-color="#E6EDDF"/>
     </linearGradient>
   </defs>
 </svg>

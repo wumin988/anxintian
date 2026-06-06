@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ReportCard } from "@/components/report-card";
 import { getFarmById, getProductBySlug, getReportById, getSiteContent } from "@/lib/site-content";
 
 export const dynamic = "force-dynamic";
@@ -25,37 +24,103 @@ export default async function ProductDetailPage({ params }) {
   const farm = getFarmById(content, product.farmId);
   const relatedProducts = (content.products || []).filter((item) => item.slug !== product.slug).slice(0, 3);
   const reports = (product.reportIds || []).map((reportId) => getReportById(content, reportId)).filter(Boolean);
+  const primaryReport = reports[0];
 
   return (
     <section className="section-space">
       <div className="container-shell space-y-10">
+        <div className="panel p-6 sm:p-8">
+          <p className="text-xs tracking-[0.18em] text-ink/45 uppercase">trust order</p>
+          <h1 className="mt-3 font-serif text-4xl text-ink sm:text-5xl">先看农场，再看检测、批次、运输，最后再看商品</h1>
+          <p className="mt-4 max-w-4xl text-base leading-8 text-ink/72">
+            这页不是从“多少钱”开始，而是从“它来自哪里、最近测了什么、这一批怎么走到你家”开始。安心田希望你在考虑购买前，先把信任链条看完整。
+          </p>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
+          <div className="panel overflow-hidden">
+            <div className="h-72 overflow-hidden">
+              <img src={farm?.image || product.image} alt={farm?.name || product.name} className="h-full w-full object-cover" />
+            </div>
+            <div className="p-6 sm:p-8">
+              <p className="text-xs tracking-[0.18em] text-ink/45 uppercase">1. source farm</p>
+              <h2 className="mt-3 text-3xl font-medium text-ink">{farm?.name}</h2>
+              <p className="mt-4 text-sm leading-8 text-ink/72">{farm?.story}</p>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-[24px] bg-mist p-4">
+                  <p className="text-xs text-ink/45">合作时间</p>
+                  <p className="mt-2 text-xl font-medium text-ink">{farm?.cooperationYears}</p>
+                </div>
+                <div className="rounded-[24px] bg-mist p-4">
+                  <p className="text-xs text-ink/45">平台评级</p>
+                  <p className="mt-2 text-xl font-medium text-ink">{farm?.platformRating}</p>
+                </div>
+              </div>
+              <Link href={`/traceability/${farm?.id}`} className="cta-secondary mt-6">查看农场详情</Link>
+            </div>
+          </div>
+
+          <div className="panel p-6 sm:p-8">
+            <p className="text-xs tracking-[0.18em] text-ink/45 uppercase">2. reports</p>
+            <h2 className="mt-3 text-3xl font-medium text-ink">检测</h2>
+            <div className="mt-6 space-y-4">
+              {reports.map((report) => (
+                <div key={report.id} className="rounded-[24px] bg-mist p-5">
+                  <p className="text-xs tracking-[0.18em] text-ink/45 uppercase">{report.date}</p>
+                  <p className="mt-2 text-lg font-medium text-ink">{report.title}</p>
+                  <p className="mt-3 text-sm leading-7 text-ink/72">{report.summary}</p>
+                  <Link href={`/reports/${report.id}`} className="cta-secondary mt-4">查看检测详情</Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
+          <div className="panel p-6 sm:p-8">
+            <p className="text-xs tracking-[0.18em] text-ink/45 uppercase">3. batch</p>
+            <h2 className="mt-3 text-3xl font-medium text-ink">批次</h2>
+            <div className="mt-6 space-y-3">
+              {product.traceability.map((item) => (
+                <div key={item} className="rounded-[22px] border border-ink/8 bg-white px-4 py-3 text-sm leading-7 text-ink/72">
+                  {item}
+                </div>
+              ))}
+            </div>
+            {primaryReport?.batchCode ? (
+              <div className="mt-5 rounded-[24px] bg-earth-glow p-5 text-sm leading-7 text-ink/72">
+                对应检测批次：<span className="font-medium text-ink">{primaryReport.batchCode}</span>
+              </div>
+            ) : null}
+          </div>
+
+          <div className="panel p-6 sm:p-8">
+            <p className="text-xs tracking-[0.18em] text-ink/45 uppercase">4. transport</p>
+            <h2 className="mt-3 text-3xl font-medium text-ink">运输</h2>
+            <p className="mt-6 text-sm leading-8 text-ink/72">
+              {primaryReport?.transportRecord || "当前商品支持会员城市冷链预约配送，平台会根据家庭结构和补货节奏安排发运。"}
+            </p>
+            <div className="mt-6 rounded-[24px] bg-mist p-5 text-sm leading-7 text-ink/72">
+              推荐加入会员后设置每周或每两周补货频率，系统将依据家庭结构和常购记录提醒下单与预约配送。
+            </div>
+          </div>
+        </div>
+
         <div className="grid gap-8 lg:grid-cols-[1fr_0.95fr] lg:items-start">
           <div className="panel overflow-hidden bg-earth-glow p-5 sm:p-6">
             <div className="relative h-[340px] overflow-hidden rounded-[30px] bg-[linear-gradient(135deg,#dce7d6,#f5dfcf_55%,#fffaf6)] sm:h-[460px]">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="h-full w-full object-cover"
-              />
+              <img src={product.image} alt={product.name} className="h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/25 via-transparent to-white/10" />
               <div className="absolute left-8 top-8 rounded-full bg-[#f4f8e8]/95 px-4 py-2 text-xs font-medium text-[#507a35]">
                 会员精选
               </div>
-              <div className="absolute bottom-8 left-8 right-8 rounded-[24px] border border-white/60 bg-white/82 p-4 backdrop-blur-sm sm:max-w-md">
-                <div className="flex flex-wrap gap-2">
-                  <span className="rounded-full bg-[#eef7dc] px-3 py-1 text-xs font-medium text-[#5c8a3f]">{farm?.name}</span>
-                  <span className="rounded-full bg-[#f4f2ea] px-3 py-1 text-xs text-ink/65">{farm?.location?.replace("·", " · ")}</span>
-                </div>
-                <p className="mt-3 text-xs text-ink/45">批次信息</p>
-                <p className="mt-1 text-sm leading-6 text-ink/75">{product.traceability[0]}</p>
-              </div>
             </div>
           </div>
           <div className="space-y-6">
-            <span className="eyebrow">{product.badge}</span>
+            <span className="eyebrow">5. product</span>
             <div>
               <p className="text-sm text-ink/50">{product.category}</p>
-              <h1 className="mt-3 font-serif text-4xl text-ink sm:text-5xl">{product.name}</h1>
+              <h2 className="mt-3 font-serif text-4xl text-ink sm:text-5xl">{product.name}</h2>
               <p className="mt-4 text-base leading-8 text-ink/72">{product.desc}</p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
@@ -65,125 +130,25 @@ export default async function ProductDetailPage({ params }) {
                 <p className="mt-1 text-sm text-ink/45 line-through">日常价 ¥{product.price}</p>
               </div>
               <div className="panel p-5">
-                <p className="text-xs text-ink/45">来源农场</p>
-                <p className="mt-2 text-2xl font-medium text-ink">{farm?.name}</p>
-                <p className="mt-1 text-sm text-ink/60">{farm?.location}</p>
+                <p className="text-xs text-ink/45">适合家庭场景</p>
+                <p className="mt-2 text-lg font-medium text-ink">{product.highlights?.[1] || "家庭常备"}</p>
+                <p className="mt-2 text-sm leading-6 text-ink/60">{product.nutrition}</p>
               </div>
             </div>
-            <div className="flex flex-wrap gap-3">
-              <Link href="/join" className="cta-primary">预约会员购买</Link>
-              <Link href="/traceability" className="cta-secondary">查看农场溯源</Link>
-            </div>
-            <div className="rounded-[28px] border border-[#e6ead8] bg-[#f8f8f1] p-5">
-              <p className="text-xs tracking-[0.18em] text-ink/45 uppercase">quick guide</p>
-              <div className="mt-4 grid gap-3 sm:grid-cols-3">
-                {[
-                  { label: "看产地", value: farm?.location || "产地公开" },
-                  { label: "看批次", value: product.traceability[0] },
-                  { label: "看适合谁", value: product.highlights?.[1] || "适合家庭常备" }
-                ].map((item) => (
-                  <div key={item.label} className="rounded-[22px] bg-white p-4">
-                    <p className="text-xs text-ink/45">{item.label}</p>
-                    <p className="mt-2 text-sm leading-6 text-ink/75">{item.value}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-          <div className="panel p-6 sm:p-8">
-            <h2 className="text-2xl font-medium text-ink">商品亮点</h2>
-            <div className="mt-6 grid gap-4 sm:grid-cols-3">
+            <h3 className="text-xl font-medium text-ink">商品亮点</h3>
+            <div className="grid gap-4 sm:grid-cols-3">
               {product.highlights.map((item) => (
                 <div key={item} className="rounded-[24px] bg-mist p-4 text-sm leading-7 text-ink/72">
                   {item}
                 </div>
               ))}
             </div>
-            <h3 className="mt-8 text-xl font-medium text-ink">适合家庭场景</h3>
-            <p className="mt-3 text-sm leading-7 text-ink/72">{product.nutrition}</p>
-            <h3 className="mt-8 text-xl font-medium text-ink">可追溯信息</h3>
-            <ul className="mt-4 space-y-3 text-sm text-ink/72">
-              {product.traceability.map((item) => (
-                <li key={item} className="rounded-[22px] border border-ink/8 bg-white px-4 py-3">
-                  {item}
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-8 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-              <div className="overflow-hidden rounded-[28px]">
-                <img
-                  src={farm?.image || product.image}
-                  alt={farm?.name || product.name}
-                  className="h-full min-h-[280px] w-full object-cover"
-                />
-              </div>
-              <div className="space-y-4 rounded-[28px] bg-earth-glow p-6">
-                <p className="text-xs tracking-[0.18em] text-ink/45 uppercase">how to trust this item</p>
-                <h3 className="text-2xl font-medium text-ink">一份安心食材，具体要看哪些信息</h3>
-                <div className="space-y-3">
-                  <div className="rounded-[22px] bg-white/85 p-4 text-sm leading-7 text-ink/72">
-                    先看来源农场是否长期稳定，是否能说清楚产地、种植方式和履约流程。
-                  </div>
-                  <div className="rounded-[22px] bg-white/85 p-4 text-sm leading-7 text-ink/72">
-                    再看批次信息和最近检测摘要，确认这不是一句泛泛而谈的有机宣传。
-                  </div>
-                  <div className="rounded-[22px] bg-white/85 p-4 text-sm leading-7 text-ink/72">
-                    最后看它是否适合你的家庭场景，比如儿童加餐、主粮补货或固定周配需求。
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="space-y-6">
-            <div className="panel p-6">
-              <h2 className="text-2xl font-medium text-ink">检测与认证</h2>
-              {reports.length ? (
-                <div className="mt-4 space-y-4">
-                  {reports.map((report) => (
-                    <div key={report.id} className="rounded-[24px] bg-mist p-5 text-sm leading-7 text-ink/72">
-                      <p className="font-medium text-ink">{report.title}</p>
-                      <p className="mt-2">{report.summary}</p>
-                      <p className="mt-3 text-ink/55">报告编号：{report.id}</p>
-                      <a href={report.attachmentUrl} target="_blank" rel="noreferrer" className="cta-secondary mt-4">
-                        查看报告附件
-                      </a>
-                    </div>
-                  ))}
-                </div>
-              ) : null}
-              <div className="mt-4 space-y-3 text-sm text-ink/72">
-                {farm?.certifications.map((item) => (
-                  <div key={item} className="rounded-[20px] border border-ink/8 bg-white px-4 py-3">
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="panel p-6">
-              <h2 className="text-2xl font-medium text-ink">配送建议</h2>
-              <p className="mt-4 text-sm leading-7 text-ink/72">
-                推荐加入会员后设置每周或每两周补货频率，系统将依据家庭结构和常购记录提醒下单与预约配送。
-              </p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/join" className="cta-primary">预约会员购买</Link>
+              <Link href={`/traceability/${farm?.id}`} className="cta-secondary">查看农场溯源</Link>
             </div>
           </div>
         </div>
-
-        {reports.length ? (
-          <div className="space-y-6">
-            <h2 className="section-title">本商品关联检测报告</h2>
-            <div className="grid gap-6 lg:grid-cols-3">
-              {reports.map((report) => (
-                <ReportCard key={report.id} report={report} />
-              ))}
-            </div>
-          </div>
-        ) : null}
 
         <div className="space-y-6">
           <h2 className="section-title">你可能还想一起加入家庭食材清单</h2>

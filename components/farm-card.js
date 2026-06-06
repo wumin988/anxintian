@@ -15,16 +15,16 @@ export function FarmCard({ farm, report }) {
         <p className="text-sm leading-7 text-ink/70">{farm.story}</p>
         <div className="grid gap-3 sm:grid-cols-2">
           <div className="rounded-3xl bg-mist p-4 text-sm text-ink/72">
-            <p className="text-xs text-ink/45">种植规模</p>
-            <p className="mt-1 text-lg font-medium text-ink">{farm.acreage}</p>
+            <p className="text-xs text-ink/45">合作年限</p>
+            <p className="mt-1 text-lg font-medium text-ink">{farm.cooperationYears}</p>
           </div>
           <div className="rounded-3xl bg-mist p-4 text-sm text-ink/72">
             <p className="text-xs text-ink/45">最近检测</p>
-            <p className="mt-1 text-lg font-medium text-ink">{report?.id}</p>
+            <p className="mt-1 text-lg font-medium text-ink">{farm.lastTest || report?.date}</p>
           </div>
         </div>
-        <Link href={`/traceability#${farm.id}`} className="cta-secondary">
-          查看溯源档案
+        <Link href={`/traceability/${farm.id}`} className="cta-secondary">
+          查看农场详情
         </Link>
       </div>
     </article>

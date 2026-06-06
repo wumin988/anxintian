@@ -6,10 +6,10 @@ import { useState } from "react";
 
 const links = [
   { href: "/", label: "首页" },
-  { href: "/products", label: "商品" },
-  { href: "/traceability", label: "农场溯源" },
-  { href: "/membership", label: "会员介绍" },
+  { href: "/traceability", label: "农场" },
   { href: "/trust", label: "信任中心" },
+  { href: "/membership", label: "会员" },
+  { href: "/products", label: "商品" },
   { href: "/about", label: "关于我们" },
   { href: "/join", label: "加入会员" },
   { href: "/admin", label: "后台" }

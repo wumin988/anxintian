@@ -11,9 +11,14 @@ export function ReportCard({ report }) {
           <p className="mt-2 text-sm text-ink/50">编号：{report.id}</p>
         </div>
         <p className="text-sm leading-7 text-ink/70">{report.summary}</p>
-        <a href={report.attachmentUrl} target="_blank" rel="noreferrer" className="cta-secondary">
-          查看附件：{report.attachmentName}
-        </a>
+        <div className="flex flex-wrap gap-3">
+          <a href={report.attachmentUrl} target="_blank" rel="noreferrer" className="cta-secondary">
+            查看附件
+          </a>
+          <a href={`/reports/${report.id}`} className="cta-secondary">
+            查看报告详情
+          </a>
+        </div>
       </div>
     </article>
   );

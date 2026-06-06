@@ -59,6 +59,16 @@
       "title": "2026 年 5 月蔬菜抽检摘要",
       "summary": "叶菜类样本 12 份，农残未检出；重金属指标符合有机标准。",
       "date": "2026-05-28",
+      "farmId": "songlin-valley",
+      "batchCode": "SL-0528-V",
+      "transportRecord": "冷链周配车 3.8℃，2026-05-29 06:40 从分拣中心发出。",
+      "items": [
+        "有机磷农残：未检出",
+        "拟除虫菊酯：未检出",
+        "铅、镉：符合平台控制线",
+        "菌落与清洁采后记录：正常"
+      ],
+      "interpretation": "这批叶菜适合作为家庭一周高频蔬菜使用，儿童餐桌和日常清炒都可以放心安排。",
       "attachmentName": "松林谷蔬菜批次检测摘要",
       "attachmentUrl": "/reports/songlin-valley-report.svg"
     },
@@ -67,6 +77,16 @@
       "title": "2026 年春季稻米加工检测摘要",
       "summary": "黄曲霉毒素、镉、铅等项目符合国家与平台更高内部标准。",
       "date": "2026-04-19",
+      "farmId": "heihe-rice",
+      "batchCode": "HH-0419-R",
+      "transportRecord": "真空装入仓后按常温主粮线路发运，2026-04-20 完成华东中心入仓。",
+      "items": [
+        "黄曲霉毒素：未检出",
+        "镉、铅：符合平台控制线",
+        "水分与碎米率：符合精选主粮标准",
+        "留胚率抽样：稳定"
+      ],
+      "interpretation": "适合作为家庭长期主粮和宝宝粥底来源，适合加入固定补货清单。",
       "attachmentName": "黑河稻米加工检验摘要",
       "attachmentUrl": "/reports/heihe-rice-report.svg"
     },
@@ -75,6 +95,16 @@
       "title": "2026 年 5 月乳品菌检摘要",
       "summary": "全部批次菌落总数、体细胞数、蛋白含量均在平台控制线内。",
       "date": "2026-05-24",
+      "farmId": "ningxia-dairy",
+      "batchCode": "NX-0524-M",
+      "transportRecord": "挤奶后 30 分钟进入 4℃ 冷链，2026-05-25 完成会员城市低温干线转运。",
+      "items": [
+        "菌落总数：符合平台控制线",
+        "体细胞数：符合平台控制线",
+        "蛋白含量：稳定",
+        "冷链中途温控抽检：正常"
+      ],
+      "interpretation": "适合作为家庭早餐乳品和儿童加餐来源，关键风险点主要集中在冷链履约，当前批次表现稳定。",
       "attachmentName": "晨曦牧场乳品菌检摘要",
       "attachmentUrl": "/reports/ningxia-dairy-report.svg"
     }
@@ -86,6 +116,33 @@
       "image": "/imagery/farm-songlin-china.png",
       "location": "云南·大理洱源",
       "specialty": "叶菜、番茄、彩椒",
+      "cooperationYears": "4 年",
+      "cumulativeTests": "126 批",
+      "lastTest": "2026-05-28",
+      "platformRating": "A级",
+      "mapLabel": "云南省大理白族自治州洱源县右所镇高海拔种植带",
+      "mapNote": "距离平台西南冷链分拣点约 92 公里，主要服务叶菜和儿童友好蔬菜供给。",
+      "videoTitle": "松林谷春季晨采记录",
+      "videoNote": "展示叶菜晨采、预冷、分拣和装箱流程。",
+      "videoPoster": "/imagery/farm-songlin-china.png",
+      "videoUrl": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+      "detectionHistory": [
+        {
+          "date": "2026-05-28",
+          "title": "叶菜抽检摘要",
+          "result": "农残未检出"
+        },
+        {
+          "date": "2026-04-26",
+          "title": "灌溉水与土壤抽检",
+          "result": "重金属符合平台控制线"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "温室轮作批次复检",
+          "result": "采后管理记录完整"
+        }
+      ],
       "established": "2016",
       "acreage": "280 亩",
       "certifications": [
@@ -107,6 +164,33 @@
       "image": "/imagery/farm-heihe-china.png",
       "location": "黑龙江·五大连池",
       "specialty": "有机稻米、杂粮",
+      "cooperationYears": "5 年",
+      "cumulativeTests": "148 批",
+      "lastTest": "2026-04-19",
+      "platformRating": "A级",
+      "mapLabel": "黑龙江省五大连池市黑土湿地带原生稻区",
+      "mapNote": "靠近寒地仓储与加工节点，适合长期主粮供给与真空装发运。",
+      "videoTitle": "黑河原生稻田春耕纪实",
+      "videoNote": "展示播种、仓储和加工批次编码流程。",
+      "videoPoster": "/imagery/farm-heihe-china.png",
+      "videoUrl": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+      "detectionHistory": [
+        {
+          "date": "2026-04-19",
+          "title": "春季稻米加工检测",
+          "result": "黄曲霉毒素未检出"
+        },
+        {
+          "date": "2026-02-18",
+          "title": "仓储环境抽检",
+          "result": "温湿度记录稳定"
+        },
+        {
+          "date": "2025-12-22",
+          "title": "新米口感与营养复检",
+          "result": "达到平台精选标准"
+        }
+      ],
       "established": "2013",
       "acreage": "460 亩",
       "certifications": [
@@ -128,6 +212,33 @@
       "image": "/imagery/farm-ningxia-china.png",
       "location": "宁夏·中卫",
       "specialty": "A2 鲜奶、原味酸奶",
+      "cooperationYears": "3 年",
+      "cumulativeTests": "97 批",
+      "lastTest": "2026-05-24",
+      "platformRating": "A级",
+      "mapLabel": "宁夏中卫高日照草场带",
+      "mapNote": "以低温履约城市为核心，重点管理奶源、菌检和冷链温控。",
+      "videoTitle": "晨曦牧场清晨放牧记录",
+      "videoNote": "展示草场放牧、挤奶和冷链入库流程。",
+      "videoPoster": "/imagery/farm-ningxia-china.png",
+      "videoUrl": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+      "detectionHistory": [
+        {
+          "date": "2026-05-24",
+          "title": "乳品菌检摘要",
+          "result": "菌落总数稳定"
+        },
+        {
+          "date": "2026-04-21",
+          "title": "奶源蛋白与体细胞复检",
+          "result": "符合平台控制线"
+        },
+        {
+          "date": "2026-03-14",
+          "title": "冷链中途温控抽检",
+          "result": "全程温控正常"
+        }
+      ],
       "established": "2018",
       "acreage": "1200 亩",
       "certifications": [
@@ -254,34 +365,37 @@
     {
       "name": "安心试享",
       "price": "¥199 / 季",
-      "summary": "适合刚开始建立家庭安心食材清单的家庭。",
+      "summary": "适合刚开始建立家庭常备食材清单、希望先减少选择焦虑的家庭。",
       "perks": [
-        "每周精选推荐",
-        "基础农场溯源权限",
+        "每周家庭食材清单",
+        "告诉你本周什么值得买",
+        "基础农场档案查看",
         "会员专享价"
       ]
     },
     {
       "name": "家庭常备",
       "price": "¥699 / 半年",
-      "summary": "适合有孩子、需要稳定主粮和乳品补给的家庭。",
+      "summary": "适合有孩子、需要稳定主粮和乳品补给的家庭，把高频采购交给平台一起把关。",
       "perks": [
-        "每周精选推荐",
+        "每周家庭食材清单",
+        "告诉你本周什么不值得买",
         "检测报告库",
         "专属配送协调",
-        "家庭定制食材包"
+        "根据家庭结构推荐"
       ]
     },
     {
       "name": "深度守护",
       "price": "¥1299 / 年",
-      "summary": "适合把食材安全、家庭补货和长期生活方式一起管理的高频家庭。",
+      "summary": "适合想把孩子饮食、老人健康和长期补货一起管理起来的高频家庭。",
       "perks": [
-        "全年精选推荐",
+        "全年家庭食材清单",
+        "每周值得买 / 不值得买",
         "农场溯源权限",
         "检测报告库",
-        "家庭定制食材包",
-        "农场直播",
+        "根据家庭结构推荐",
+        "走进农场，查看生产现场",
         "核心城市专属配送"
       ]
     }

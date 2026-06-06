@@ -3,13 +3,13 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://anxintian.vercel.app"),
   title: {
-    default: "安心田 | 可信有机食材会员直供平台",
+    default: "安心田 | 家庭食品信任平台",
     template: "%s | 安心田"
   },
-  description: "安心田是面向家庭健康饮食的有机食材会员直供平台，提供农场溯源、检测报告、会员价与定期配送服务。",
-  keywords: ["安心田", "有机食品", "会员制", "农场溯源", "家庭健康食材", "有机食材直供"],
+  description: "安心田以农场审核、批次检测和会员直供为核心，为有孩子和重视长期饮食安全的家庭提供更值得信任的食材选择。",
+  keywords: ["安心田", "家庭食品信任平台", "有机食品", "农场溯源", "批次检测", "会员直供", "家庭健康食材"],
   alternates: {
     canonical: "/"
   },
@@ -20,9 +20,9 @@ export const metadata = {
     apple: "/apple-touch-icon.svg"
   },
   openGraph: {
-    title: "安心田 | 可信有机食材会员直供平台",
-    description: "精选可信农场、公开检测与溯源信息，用会员制把家庭健康食材供应做得更稳定、更省心。",
-    url: "http://localhost:3000",
+    title: "安心田 | 家庭食品信任平台",
+    description: "先看农场、再看检测、最后再决定是否长期放进家里。安心田把家庭餐桌真正需要的信任信息放在食材前面。",
+    url: "https://anxintian.vercel.app",
     siteName: "安心田",
     locale: "zh_CN",
     type: "website",
@@ -37,8 +37,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "安心田 | 可信有机食材会员直供平台",
-    description: "精选可信农场、公开检测与溯源信息，用会员制把家庭健康食材供应做得更稳定、更省心。",
+    title: "安心田 | 家庭食品信任平台",
+    description: "先看农场、再看检测、最后再决定是否长期放进家里。",
     images: ["/og-cover.svg"]
   }
 };

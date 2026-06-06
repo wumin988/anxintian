@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>天鹿良食 | 商品详情</title>
+  <meta name="description" content="查看有机商品的产地、认证、规格库存和配送建议。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-detail">
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="天鹿良食首页">
+        <span class="brand-mark">天鹿</span>
+        <span class="brand-copy">
+          <strong>TIANLU GOOD FOOD</strong>
+          <small>Traceable fresh detail</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="index.html#featured">返回首页</a>
+        <a href="index.html#membership">会员订阅</a>
+        <a href="cart.html">购物车</a>
+      </nav>
+      <div class="header-actions">
+        <a class="cart-button" href="cart.html">
+          购物车
+          <span data-cart-count>0</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <div>
+          <p class="eyebrow">PRODUCT DETAIL</p>
+          <h1>商品详情与溯源</h1>
+        </div>
+        <p>这里会展示适合人群、规格库存、产地故事和配送建议，帮助用户更安心地下单。</p>
+      </section>
+
+      <section class="detail-layout" id="detail-root" aria-live="polite"></section>
+
+      <section class="recommend-section">
+        <div class="section-heading compact">
+          <div>
+            <p class="eyebrow">YOU MAY ALSO LIKE</p>
+            <h2>同类场景推荐</h2>
+          </div>
+          <p>如果你正在搭配一周餐桌，这些商品通常会一起进入购物车。</p>
+        </div>
+        <div class="recommend-grid" id="recommend-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="status-message" aria-live="polite"></div>
+  <script src="storefront.js" defer></script>
+  <script src="product.js" defer></script>
+</body>
+</html>

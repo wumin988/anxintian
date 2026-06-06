@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>天鹿良食 | 购物车与下单</title>
+  <meta name="description" content="查看商品、调整规格数量并完成订单提交。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-cart">
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="天鹿良食首页">
+        <span class="brand-mark">天鹿</span>
+        <span class="brand-copy">
+          <strong>TIANLU GOOD FOOD</strong>
+          <small>Basket & checkout</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="index.html#featured">继续选购</a>
+        <a href="index.html#delivery">配送计划</a>
+        <a href="cart.html">提交订单</a>
+      </nav>
+      <div class="header-actions">
+        <a class="cart-button" href="cart.html">
+          购物车
+          <span data-cart-count>0</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <div>
+          <p class="eyebrow">CHECKOUT</p>
+          <h1>购物车与结算</h1>
+        </div>
+        <p>你可以在这里调整规格、确认配送信息，并提交本周的新鲜订单。</p>
+      </section>
+
+      <section class="cart-layout">
+        <article class="detail-panel">
+          <div class="page-intro page-intro-inline">
+            <div>
+              <h2>本次选购商品</h2>
+            </div>
+            <a class="outline-button" href="index.html#featured">继续挑选</a>
+          </div>
+          <div class="cart-list" id="cart-list" aria-live="polite"></div>
+        </article>
+
+        <aside>
+          <section class="summary-card" id="auth-required-card" hidden>
+            <h2>登录提醒</h2>
+            <p class="form-note">提交订单前请先登录账号，这样后续才能关联会员权益和个人订单。</p>
+            <div class="cart-actions">
+              <a class="primary-button" href="auth.html">去登录 / 注册</a>
+            </div>
+          </section>
+
+          <section class="summary-card">
+            <h2>订单摘要</h2>
+            <div class="summary-list" id="summary-list"></div>
+          </section>
+
+          <section class="checkout-card">
+            <h2>填写配送信息</h2>
+            <form id="checkout-form">
+              <div class="field-grid">
+                <label class="field">
+                  <span>姓名</span>
+                  <input name="name" required placeholder="例如：林然">
+                </label>
+                <label class="field">
+                  <span>手机号</span>
+                  <input name="phone" required placeholder="例如：13800138000">
+                </label>
+                <label class="field">
+                  <span>城市</span>
+                  <input name="city" required placeholder="例如：上海">
+                </label>
+                <label class="field">
+                  <span>支付方式</span>
+                  <select name="paymentMethod" required>
+                    <option value="支付宝">支付宝</option>
+                    <option value="微信支付">微信支付</option>
+                    <option value="银行卡">银行卡</option>
+                  </select>
+                </label>
+                <label class="field full">
+                  <span>详细地址</span>
+                  <input name="address" required placeholder="例如：浦东新区张杨路 188 号 1208 室">
+                </label>
+                <label class="field full">
+                  <span>配送备注</span>
+                  <textarea name="note" placeholder="例如：工作日 19:00 后送达，或可与邻居拼单"></textarea>
+                </label>
+              </div>
+              <p class="form-note">提交后会实时扣减库存，并根据城市返回预计送达时间。</p>
+              <div class="cart-actions">
+                <button class="primary-button" type="submit">提交订单</button>
+                <a class="secondary-button" href="index.html">返回首页</a>
+              </div>
+            </form>
+            <div id="order-result"></div>
+          </section>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="status-message" aria-live="polite"></div>
+  <script src="storefront.js" defer></script>
+  <script src="cart.js" defer></script>
+</body>
+</html>

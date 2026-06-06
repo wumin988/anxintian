@@ -1,0 +1,17 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="32" fill="#F8F3EA"/>
+  <rect x="46" y="46" width="1108" height="668" rx="28" fill="white"/>
+  <text x="90" y="128" fill="#223127" font-size="38" font-family="sans-serif" font-weight="700">安心田检测摘要</text>
+  <text x="90" y="174" fill="#6F5A44" font-size="22" font-family="sans-serif">松林谷生态农场 · 叶菜批次抽检报告预览</text>
+  <rect x="90" y="230" width="1020" height="118" rx="24" fill="#EEF3EB"/>
+  <text x="120" y="278" fill="#223127" font-size="24" font-family="sans-serif" font-weight="700">核心结果</text>
+  <text x="120" y="320" fill="#4E5E53" font-size="20" font-family="sans-serif">农残未检出 · 重金属符合内部标准 · 灌溉水样合格</text>
+  <rect x="90" y="390" width="490" height="240" rx="24" fill="#F7F1E8"/>
+  <rect x="620" y="390" width="490" height="240" rx="24" fill="#F7F1E8"/>
+  <text x="120" y="440" fill="#223127" font-size="24" font-family="sans-serif" font-weight="700">样本信息</text>
+  <text x="120" y="486" fill="#4E5E53" font-size="20" font-family="sans-serif">样本数：12 份</text>
+  <text x="120" y="522" fill="#4E5E53" font-size="20" font-family="sans-serif">采样日期：2026-05-28</text>
+  <text x="120" y="558" fill="#4E5E53" font-size="20" font-family="sans-serif">检测机构：合作实验室</text>
+  <text x="650" y="440" fill="#223127" font-size="24" font-family="sans-serif" font-weight="700">说明</text>
+  <text x="650" y="486" fill="#4E5E53" font-size="20" font-family="sans-serif">此附件为官网 MVP 展示样例，可替换为真实 PDF 或图片文件。</text>
+</svg>

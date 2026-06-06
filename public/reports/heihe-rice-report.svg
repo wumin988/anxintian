@@ -1,0 +1,14 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="32" fill="#F6F1E8"/>
+  <rect x="46" y="46" width="1108" height="668" rx="28" fill="white"/>
+  <text x="90" y="128" fill="#223127" font-size="38" font-family="sans-serif" font-weight="700">安心田检测摘要</text>
+  <text x="90" y="174" fill="#6F5A44" font-size="22" font-family="sans-serif">黑河原生稻田 · 稻米加工检验摘要</text>
+  <rect x="90" y="230" width="1020" height="118" rx="24" fill="#EEF3EB"/>
+  <text x="120" y="278" fill="#223127" font-size="24" font-family="sans-serif" font-weight="700">核心结果</text>
+  <text x="120" y="320" fill="#4E5E53" font-size="20" font-family="sans-serif">黄曲霉毒素未检出 · 镉与铅指标达标 · 水分控制稳定</text>
+  <rect x="90" y="390" width="1020" height="240" rx="24" fill="#F7F1E8"/>
+  <text x="120" y="440" fill="#223127" font-size="24" font-family="sans-serif" font-weight="700">批次说明</text>
+  <text x="120" y="486" fill="#4E5E53" font-size="20" font-family="sans-serif">加工批次：HH-0528-R</text>
+  <text x="120" y="522" fill="#4E5E53" font-size="20" font-family="sans-serif">仓储湿度：54%</text>
+  <text x="120" y="558" fill="#4E5E53" font-size="20" font-family="sans-serif">适合作为正式报告入口预览页使用。</text>
+</svg>

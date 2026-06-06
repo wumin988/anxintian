@@ -1,0 +1,337 @@
+{
+  "stats": [
+    {
+      "label": "合作农场",
+      "value": "18 家",
+      "detail": "覆盖云南、黑龙江、浙江、宁夏等核心生态产区"
+    },
+    {
+      "label": "会员家庭",
+      "value": "1,276 户",
+      "detail": "以有孩子和关注长期饮食安全的家庭为主"
+    },
+    {
+      "label": "检测批次",
+      "value": "624 次",
+      "detail": "按月更新农残、重金属、菌落等核心检测摘要"
+    },
+    {
+      "label": "农残未检出率",
+      "value": "99.8%",
+      "detail": "以最近 12 个月平台公开批次摘要统计"
+    },
+    {
+      "label": "平均合作时长",
+      "value": "3.6 年",
+      "detail": "更看重长期稳定合作，而不是短期拼货"
+    },
+    {
+      "label": "会员城市履约",
+      "value": "48 小时",
+      "detail": "核心城市支持冷链预约配送"
+    }
+  ],
+  "trustHighlights": [
+    {
+      "title": "农场审核",
+      "text": "每个合作农场都要经过实地考察、资质核验和长期供给能力评估。"
+    },
+    {
+      "title": "批次检测",
+      "text": "关键品类按批次更新检测摘要，帮助家庭用户看懂最近这批食材是否安心。"
+    },
+    {
+      "title": "会员直供",
+      "text": "减少中间环节，把更稳定的农场关系、配送服务和家庭建议一起交付。"
+    }
+  ],
+  "categories": [
+    "全部",
+    "时令蔬菜",
+    "家庭主粮",
+    "有机乳品",
+    "儿童友好",
+    "会员定配"
+  ],
+  "reports": [
+    {
+      "id": "AT-SL-202605",
+      "title": "2026 年 5 月蔬菜抽检摘要",
+      "summary": "叶菜类样本 12 份，农残未检出；重金属指标符合有机标准。",
+      "date": "2026-05-28",
+      "attachmentName": "松林谷蔬菜批次检测摘要",
+      "attachmentUrl": "/reports/songlin-valley-report.svg"
+    },
+    {
+      "id": "AT-HH-202604",
+      "title": "2026 年春季稻米加工检测摘要",
+      "summary": "黄曲霉毒素、镉、铅等项目符合国家与平台更高内部标准。",
+      "date": "2026-04-19",
+      "attachmentName": "黑河稻米加工检验摘要",
+      "attachmentUrl": "/reports/heihe-rice-report.svg"
+    },
+    {
+      "id": "AT-NX-202605",
+      "title": "2026 年 5 月乳品菌检摘要",
+      "summary": "全部批次菌落总数、体细胞数、蛋白含量均在平台控制线内。",
+      "date": "2026-05-24",
+      "attachmentName": "晨曦牧场乳品菌检摘要",
+      "attachmentUrl": "/reports/ningxia-dairy-report.svg"
+    }
+  ],
+  "farms": [
+    {
+      "id": "songlin-valley",
+      "name": "松林谷生态农场",
+      "image": "/imagery/farm-songlin-china.png",
+      "location": "云南·大理洱源",
+      "specialty": "叶菜、番茄、彩椒",
+      "established": "2016",
+      "acreage": "280 亩",
+      "certifications": [
+        "中国有机产品认证",
+        "欧盟有机转换管理",
+        "山泉水灌溉检测"
+      ],
+      "story": "高海拔缓坡种植区与轮作温室结合，遵循自然农法和生物防控，重点供应家庭常备蔬菜与儿童辅食食材。",
+      "practices": [
+        "每周上传土壤、灌溉与温室巡检记录",
+        "采后 2 小时预冷，锁住叶菜鲜度",
+        "合作实验室月度农残和重金属抽检"
+      ],
+      "reportId": "AT-SL-202605"
+    },
+    {
+      "id": "heihe-rice",
+      "name": "黑河原生稻田",
+      "image": "/imagery/farm-heihe-china.png",
+      "location": "黑龙江·五大连池",
+      "specialty": "有机稻米、杂粮",
+      "established": "2013",
+      "acreage": "460 亩",
+      "certifications": [
+        "中国有机产品认证",
+        "寒地黑土保护项目",
+        "加工厂 HACCP"
+      ],
+      "story": "依托冷凉气候与黑土湿地带，实行稻鸭共生和低温仓储，适合作为会员家庭长期主粮来源。",
+      "practices": [
+        "从播种到加工全链路批次编码",
+        "仓储温湿度自动采集并开放查看",
+        "年度新米上线前做口感与营养双评估"
+      ],
+      "reportId": "AT-HH-202604"
+    },
+    {
+      "id": "ningxia-dairy",
+      "name": "宁夏晨曦牧场",
+      "image": "/imagery/farm-ningxia-china.png",
+      "location": "宁夏·中卫",
+      "specialty": "A2 鲜奶、原味酸奶",
+      "established": "2018",
+      "acreage": "1200 亩",
+      "certifications": [
+        "有机饲草认证",
+        "奶源 SGS 抽检",
+        "冷链追溯体系认证"
+      ],
+      "story": "采用会员预约配奶模式，奶源、菌检与冷链温控信息同步公开，让乳品供应更可验证。",
+      "practices": [
+        "挤奶后 30 分钟内进入 4℃ 冷链",
+        "体细胞与菌落总数每批上传",
+        "会员城市按订阅频率稳定派送"
+      ],
+      "reportId": "AT-NX-202605"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "slug": "spring-lettuce-box",
+      "name": "晨采有机叶菜盒",
+      "image": "/imagery/products/spring-lettuce-box.png",
+      "category": "时令蔬菜",
+      "price": 89,
+      "memberPrice": 78,
+      "farmId": "songlin-valley",
+      "badge": "本周定配",
+      "desc": "适合 3-4 口之家的一周基础叶菜组合，包含奶油生菜、菠菜、小油菜等。",
+      "highlights": [
+        "采摘后 24 小时内入户",
+        "适合辅食与轻食家庭",
+        "支持按周配送"
+      ],
+      "traceability": [
+        "采收批次 SL-0606-A",
+        "地块编号 A3 温室",
+        "冷链箱温 3.8℃"
+      ],
+      "nutrition": "低硝酸盐管理，适合日常清炒、沙拉与辅食搭配。",
+      "reportIds": [
+        "AT-SL-202605"
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "black-soil-rice",
+      "name": "黑土有机胚芽米",
+      "image": "/imagery/products/black-soil-rice.png",
+      "category": "家庭主粮",
+      "price": 128,
+      "memberPrice": 108,
+      "farmId": "heihe-rice",
+      "badge": "家庭回购",
+      "desc": "2kg 真空装，米香浓郁，适合作为家庭长期主粮与宝宝粥底。",
+      "highlights": [
+        "寒地黑土种植",
+        "真空锁鲜",
+        "可查看加工批次"
+      ],
+      "traceability": [
+        "加工批次 HH-0528-R",
+        "仓储湿度 54%",
+        "质检员编号 Q17"
+      ],
+      "nutrition": "保留部分胚芽与米香，口感软糯，适合中式家常餐桌。",
+      "reportIds": [
+        "AT-HH-202604"
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "a2-yogurt-pack",
+      "name": "会员定配 A2 原味酸奶",
+      "image": "/imagery/products/a2-yogurt-pack.png",
+      "category": "有机乳品",
+      "price": 78,
+      "memberPrice": 59,
+      "farmId": "ningxia-dairy",
+      "badge": "会员专享",
+      "desc": "135g x 6 杯，配方简洁，适合作为家庭早餐与儿童加餐。",
+      "highlights": [
+        "每批次菌检公开",
+        "低温直达",
+        "可设置固定周配送"
+      ],
+      "traceability": [
+        "奶源批次 NX-0602-M",
+        "菌检报告已上传",
+        "骑手冷链袋 4.1℃"
+      ],
+      "nutrition": "配料仅生牛乳与菌种，蛋白质含量稳定，适合轻负担日常补充。",
+      "reportIds": [
+        "AT-NX-202605"
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "kid-friendly-pumpkin",
+      "name": "宝宝友好板栗南瓜",
+      "image": "/imagery/products/kid-friendly-pumpkin.png",
+      "category": "儿童友好",
+      "price": 46,
+      "memberPrice": 38,
+      "farmId": "songlin-valley",
+      "badge": "儿童餐桌",
+      "desc": "绵甜粉糯，适合作为宝宝辅食、蒸烤主食替代和家庭汤品。",
+      "highlights": [
+        "高粉糯口感",
+        "可追溯地块与采后记录",
+        "会员月度补货推荐"
+      ],
+      "traceability": [
+        "采收批次 SL-0601-P",
+        "地块 B2 露地",
+        "糖度抽样 11.6"
+      ],
+      "nutrition": "富含膳食纤维与胡萝卜素，是家庭常备的安心碳水选择。",
+      "reportIds": [
+        "AT-SL-202605"
+      ]
+    }
+  ],
+  "membershipPlans": [
+    {
+      "name": "安心试享",
+      "price": "¥199 / 季",
+      "summary": "适合刚开始建立家庭安心食材清单的家庭。",
+      "perks": [
+        "每周精选推荐",
+        "基础农场溯源权限",
+        "会员专享价"
+      ]
+    },
+    {
+      "name": "家庭常备",
+      "price": "¥699 / 半年",
+      "summary": "适合有孩子、需要稳定主粮和乳品补给的家庭。",
+      "perks": [
+        "每周精选推荐",
+        "检测报告库",
+        "专属配送协调",
+        "家庭定制食材包"
+      ]
+    },
+    {
+      "name": "深度守护",
+      "price": "¥1299 / 年",
+      "summary": "适合把食材安全、家庭补货和长期生活方式一起管理的高频家庭。",
+      "perks": [
+        "全年精选推荐",
+        "农场溯源权限",
+        "检测报告库",
+        "家庭定制食材包",
+        "农场直播",
+        "核心城市专属配送"
+      ]
+    }
+  ],
+  "trustModules": [
+    {
+      "title": "农场准入机制",
+      "text": "平台不是开放上架，而是通过农场走访、资质核验、样品检测和稳定性观察后再合作。"
+    },
+    {
+      "title": "检测报告公开",
+      "text": "每个核心品类都展示最近批次检测摘要，会员可进一步查看完整报告与说明。"
+    },
+    {
+      "title": "批次追踪",
+      "text": "商品详情页会展示采收批次、加工批次、冷链信息和对应农场档案。"
+    },
+    {
+      "title": "会员履约服务",
+      "text": "支持周期配送、停送调整、家庭偏好记录和客服协助，让安心感来自长期稳定。"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "以前买有机总怕只是营销词，现在每次看到批次和检测信息，给孩子做饭心里更踏实。",
+      "author": "上海会员家庭 · 两孩妈妈"
+    },
+    {
+      "quote": "我们最喜欢固定配送，不用反复挑选，家里常用的米和酸奶都有人帮我们把关。",
+      "author": "杭州会员家庭 · 上班族夫妻"
+    }
+  ],
+  "aboutValues": [
+    {
+      "title": "不做全品类，只做可信精选",
+      "text": "安心田更像一位替家庭把关的食材顾问，而不是一个拼低价的货架。"
+    },
+    {
+      "title": "把看不见的标准，变成看得见的证据",
+      "text": "我们把农场、批次、检测和履约信息拆解成可读内容，帮助家庭形成自己的判断。"
+    },
+    {
+      "title": "让安全饮食成为可持续的生活方式",
+      "text": "会员制帮助我们稳定供给与服务质量，也让用户用更低决策成本长期吃得安心。"
+    }
+  ],
+  "joinBenefits": [
+    "领取首月会员优选清单",
+    "预约城市开通与冷链覆盖通知",
+    "获取家庭食材偏好建议",
+    "参加农场直播与安心公开课"
+  ]
+}

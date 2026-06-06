@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>天鹿良食 | 登录与会员</title>
+  <meta name="description" content="注册天鹿良食账号，登录后查看会员等级与个人信息。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-auth">
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <div class="page-shell auth-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="天鹿良食首页">
+        <span class="brand-mark">天鹿</span>
+        <span class="brand-copy">
+          <strong>TIANLU GOOD FOOD</strong>
+          <small>Account & membership</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="index.html">首页</a>
+        <a href="cart.html">购物车</a>
+        <a href="admin.html">后台</a>
+      </nav>
+      <div class="header-actions">
+        <a class="cart-button" href="cart.html">
+          购物车
+          <span data-cart-count>0</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="auth-main">
+      <section class="page-intro">
+        <div>
+          <p class="eyebrow">ACCOUNT CENTER</p>
+          <h1>登录与会员中心</h1>
+        </div>
+        <p>注册账号后可以记录会员等级，后续也方便接入订阅、订单和个人资料。</p>
+      </section>
+
+      <section class="auth-layout">
+        <article class="auth-panel auth-panel-primary">
+          <div class="auth-tabs" role="tablist" aria-label="登录注册切换">
+            <button class="auth-tab active" type="button" data-auth-tab="login">登录</button>
+            <button class="auth-tab" type="button" data-auth-tab="register">注册</button>
+          </div>
+
+          <form id="login-form" class="auth-form">
+            <label class="field">
+              <span>邮箱</span>
+              <input name="email" type="email" required placeholder="例如：hello@example.com">
+            </label>
+            <label class="field">
+              <span>密码</span>
+              <input name="password" type="password" required placeholder="请输入密码">
+            </label>
+            <button class="primary-button" type="submit">登录账号</button>
+          </form>
+
+          <form id="register-form" class="auth-form" hidden>
+            <label class="field">
+              <span>姓名</span>
+              <input name="name" required placeholder="例如：林然">
+            </label>
+            <label class="field">
+              <span>邮箱</span>
+              <input name="email" type="email" required placeholder="例如：hello@example.com">
+            </label>
+            <label class="field">
+              <span>密码</span>
+              <input name="password" type="password" required placeholder="至少 6 位">
+            </label>
+            <label class="field">
+              <span>会员类型</span>
+              <select name="membershipType">
+                <option value="free">free</option>
+                <option value="seasonal">seasonal</option>
+                <option value="halfyear">halfyear</option>
+                <option value="yearly">yearly</option>
+              </select>
+            </label>
+            <button class="primary-button" type="submit">创建账号</button>
+          </form>
+        </article>
+
+        <aside class="auth-panel auth-panel-secondary">
+          <div class="auth-card-head">
+            <div>
+              <p class="eyebrow">PROFILE</p>
+              <h2>我的账号</h2>
+            </div>
+            <button class="outline-button" type="button" id="logout-button">退出登录</button>
+          </div>
+          <div id="auth-user-card" class="auth-user-card">
+            <article class="empty-state">还没有登录。登录后这里会显示用户信息和会员等级。</article>
+          </div>
+          <div class="auth-note">
+            <strong>接口说明</strong>
+            <p>当前页面默认请求 `http://127.0.0.1:5000/api/users`。启动认证服务后即可直接联调。</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="status-message" aria-live="polite"></div>
+  <script src="storefront.js" defer></script>
+  <script src="auth.js" defer></script>
+</body>
+</html>

@@ -52,7 +52,7 @@ export default async function HomePage() {
             <div className="panel overflow-hidden bg-earth-glow p-6 sm:p-8">
               <div className="rounded-[28px] border border-white/70 bg-white/78 p-6">
                 <p className="text-xs tracking-[0.18em] text-ink/45 uppercase">trust data</p>
-                <h2 className="mt-2 font-serif text-3xl text-ink">先看一组能让家庭建立把握感的数字</h2>
+                <h2 className="mt-2 font-serif text-3xl text-ink">这些公开数字，是我们给家庭的安心说明</h2>
                 <div className="mt-6 grid gap-4 sm:grid-cols-2">
                   {stats.map((item) => (
                     <div key={item.label} className="rounded-[24px] bg-white p-5 shadow-sm">

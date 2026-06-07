@@ -1,9 +1,7 @@
 import Link from "next/link";
 import { MembershipCard } from "@/components/membership-card";
-import { ProductCard } from "@/components/product-card";
 import { SectionHeading } from "@/components/section-heading";
-import { TrustCard } from "@/components/trust-card";
-import { getFarmById, getReportById, getSiteContent } from "@/lib/site-content";
+import { getSiteContent } from "@/lib/site-content";
 
 export const dynamic = "force-dynamic";
 
@@ -17,12 +15,9 @@ export default async function HomePage() {
   const content = await getSiteContent();
   const farms = content.farms || [];
   const membershipPlans = content.membershipPlans || [];
-  const products = content.products || [];
   const reports = content.reports || [];
   const stats = content.stats || [];
-  const testimonials = content.testimonials || [];
   const trustHighlights = content.trustHighlights || [];
-  const trustModules = content.trustModules || [];
   const latestReport = reports[0];
 
   return (
@@ -34,7 +29,7 @@ export default async function HomePage() {
               <span className="eyebrow">家庭食品信任平台</span>
               <h1 className="display-title">让家人吃得更放心</h1>
               <p className="max-w-2xl text-base leading-8 text-ink/72 sm:text-lg">
-                我们筛选农场、审核标准、检测批次，只把值得信任的食材送到家庭餐桌。安心田先卖信任，再卖食材。
+                哪些食材可以放心常买，哪些不值得长期放进家里，我们先替你把农场、检测和配送这几件事看清楚。
               </p>
               <div className="flex flex-wrap gap-3 text-sm text-ink/68">
                 {["农场实地审核", "批次检测公开", "会员直供配送", "家庭场景建议"].map((item) => (
@@ -194,7 +189,7 @@ export default async function HomePage() {
           <SectionHeading
             eyebrow="membership"
             title="会员 = 家庭食品管家"
-            description="会员价值不是折扣，而是每周家庭食材清单、值得买 / 不值得买判断、家庭结构推荐和走进农场的长期服务。"
+            description="会员价值不是附加功能，而是把家庭买什么、什么时候买、为什么可以买这件事，交给一套长期服务来处理。"
           />
           <div className="grid gap-6 lg:grid-cols-3">
             {membershipPlans.map((plan, index) => (
@@ -205,51 +200,14 @@ export default async function HomePage() {
       </section>
 
       <section className="section-space">
-        <div className="container-shell space-y-10">
-          <SectionHeading
-            eyebrow="trust center"
-            title="信任中心"
-            description="把准入机制、批次检测、批次追踪和会员履约放在一起，让用户知道这不是普通商品货架。"
-          />
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {trustModules.map((item) => (
-              <TrustCard key={item.title} item={item} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-space">
-        <div className="container-shell space-y-10">
-          <SectionHeading
-            eyebrow="selected products"
-            title="精选商品"
-            description="商品排在这里，因为它们只是信任关系成立之后的结果。先公开标准，再把值得放进家里的食材放到用户面前。"
-          />
-          <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-4">
-            {products.map((product) => (
-              <ProductCard
-                key={product.slug}
-                product={product}
-                farm={getFarmById(content, product.farmId)}
-                report={getReportById(content, product.reportIds?.[0])}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-space">
         <div className="container-shell grid gap-8 lg:grid-cols-[1fr_0.9fr]">
           <div className="panel bg-ink p-8 text-white">
-            <span className="eyebrow border-white/20 bg-white/10 text-white">member voices</span>
-            <div className="mt-6 space-y-6">
-              {testimonials.map((item) => (
-                <blockquote key={item.author} className="rounded-[28px] border border-white/10 bg-white/5 p-6">
-                  <p className="text-lg leading-8">“{item.quote}”</p>
-                  <footer className="mt-4 text-sm text-white/72">{item.author}</footer>
-                </blockquote>
-              ))}
+            <span className="eyebrow border-white/20 bg-white/10 text-white">who we are</span>
+            <h2 className="mt-6 font-serif text-4xl">为什么可以相信我们</h2>
+            <div className="mt-6 space-y-4 text-sm leading-8 text-white/82">
+              <p>安心田不是一个临时拼货的网站，而是一支长期在看农场、看检测、看履约的人在做这件事。</p>
+              <p>我们更关心一份食材能不能稳定、持续、放心地放进家庭餐桌，而不是一次卖出多少件商品。</p>
+              <p>所以首页先给你看农场、检测和会员服务，商品放在后面；先让你相信，再决定要不要加入。</p>
             </div>
           </div>
           <div className="panel p-8">
@@ -261,7 +219,7 @@ export default async function HomePage() {
             <div className="mt-8 space-y-4">
               <div className="rounded-[24px] bg-mist p-5">
                 <p className="text-sm text-ink/45">你将获得</p>
-                <p className="mt-2 text-base leading-7 text-ink/75">每周精选推荐、农场溯源权限、检测报告库、专属配送和家庭定制食材包建议。</p>
+                <p className="mt-2 text-base leading-7 text-ink/75">从每周买什么、哪些值得长期补货，到儿童和老人饮食建议，都有人持续帮你判断。</p>
               </div>
               <div className="rounded-[24px] bg-mist p-5">
                 <p className="text-sm text-ink/45">适合谁</p>
